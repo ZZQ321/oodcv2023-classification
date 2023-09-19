@@ -1,0 +1,18 @@
+MODEL:
+  TYPE: deit
+  NAME: deit_large
+  DROP_RATE: 0.1
+  DEIT:
+    EMBED_DIM: 1024
+    PATCH_SIZE: 16
+    DEPTH: 24
+    NUM_HEADS: 16
+
+TRAIN:
+  EPOCHS: 100
+  # START_EPOCH: 48
+  BASE_LR: 1e-5
+
+DATA:
+  MEAN: (0.5, 0.5, 0.5)
+  STD: (0.5, 0.5, 0.5)
