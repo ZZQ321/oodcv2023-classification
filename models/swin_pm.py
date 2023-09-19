@@ -218,7 +218,7 @@ class Block(nn.Module):
 
     def forward(self, x):
         t, attn = self.attn(self.norm1(x))
-        x = t + self.drop_path1(self.ls1(t))
+        x = x + self.drop_path1(self.ls1(t))
         x = x + self.drop_path2(self.ls2(self.mlp(self.norm2(x))))
         return x, attn
 
